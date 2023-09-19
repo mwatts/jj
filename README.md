@@ -1,49 +1,61 @@
-# Jujutsu VCS
+<div class="title-block" style="text-align: center;" align="center">
 
-![](https://img.shields.io/github/license/martinvonz/jj) ![](https://img.shields.io/github/v/release/martinvonz/jj) ![](https://img.shields.io/github/release-date/martinvonz/jj) ![](https://img.shields.io/crates/v/jj-cli)
-<br/>
-![](https://github.com/martinvonz/jj/workflows/build/badge.svg) ![](https://img.shields.io/codefactor/grade/github/martinvonz/jj/main) ![](https://img.shields.io/librariesio/github/martinvonz/jj)
+# Jujutsu &mdash; a version control system
 
-- [Disclaimer](#disclaimer)
-- [Introduction](#introduction)
-- [Getting started](#getting-started)
-- [Status](#status)
-- [Related work](#related-work)
+![](https://img.shields.io/github/license/martinvonz/jj)
+![](https://img.shields.io/github/v/release/martinvonz/jj)
+![](https://img.shields.io/github/release-date/martinvonz/jj)
+![](https://img.shields.io/crates/v/jj-cli)
+<br/> ![](https://github.com/martinvonz/jj/workflows/build/badge.svg)
+![](https://img.shields.io/codefactor/grade/github/martinvonz/jj/main)
+![](https://img.shields.io/librariesio/github/martinvonz/jj)
 
-## Disclaimer
+<strong>
+  <a href="https://martinvonz.github.io/jj">Homepage</a>
+  &nbsp;&nbsp;&bull;&nbsp;&nbsp;
+  <a href="https://martinvonz.github.io/jj/v0.9.0/install-and-setup.html">Installation</a>
+  &nbsp;&nbsp;&bull;&nbsp;&nbsp;
+  <a href="https://martinvonz.github.io/jj/v0.9.0/tutorial.html">Getting Started
+  Tutorial</a>
+</strong>
 
-This is not a Google product. It is an experimental version-control system
-(VCS). I (Martin von Zweigbergk <martinvonz@google.com>) started it as a hobby
-project in late 2019. That said, this is now my full-time project at Google. My
-presentation from Git Merge 2022 has information about Google's plans. See the
-[slides](https://docs.google.com/presentation/d/1F8j9_UOOSGUN9MvHxPZX_L4bQ9NMcYOp1isn17kTC_M/view)
-or the [recording](https://www.youtube.com/watch?v=bx_LGilOuE4).
+</div>
 
 ## Introduction
 
-Jujutsu is a
-[Git-compatible](https://martinvonz.github.io/jj/latest/git-compatibility)
-[DVCS](https://en.wikipedia.org/wiki/Distributed_version_control). It combines
+Jujutsu is a [Distributed Version Control System](https://en.wikipedia.org/wiki/Distributed_version_control) that is [Git-compatible](https://martinvonz.github.io/jj/latest/git-compatibility). It combines
 features from Git (data model,
 [speed](https://github.com/martinvonz/jj/discussions/49)), Mercurial (anonymous
-branching, simple CLI [free from "the
-index"](https://martinvonz.github.io/jj/latest/git-comparison#the-index),
+branching, simple CLI
+[free from "the index"](https://martinvonz.github.io/jj/latest/git-comparison#the-index),
 [revsets](https://martinvonz.github.io/jj/latest/revsets), powerful
-history-rewriting), and Pijul/Darcs ([first-class
-conflicts](https://martinvonz.github.io/jj/latest/conflicts)), with features not
-found in most of them
+history-rewriting), and Pijul/Darcs
+([first-class conflicts](https://martinvonz.github.io/jj/latest/conflicts)),
+with features not found in most of them
 ([working-copy-as-a-commit](https://martinvonz.github.io/jj/latest/working-copy),
 [undo functionality](https://martinvonz.github.io/jj/latest/operation-log),
-automatic rebase, [safe replication via `rsync`, Dropbox, or distributed file
+automatic rebase,
+[safe replication via `rsync`, Dropbox, or distributed file
 system](https://martinvonz.github.io/jj/latest/technical/concurrency)).
 
 The command-line tool is called `jj` for now because it's easy to type and easy
 to replace (rare in English). The project is called "Jujutsu" because it matches
 "jj".
 
-If you have any questions, please join us on Discord
+Jujutsu is relatively young, with lots of work to still be done. If you have any
+questions, want to solicit advice, or talk about future plans, please join us on
+Discord
 [![Discord](https://img.shields.io/discord/968932220549103686.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/dkmfj3aGQN)
-or start a [GitHub Discussion](https://github.com/martinvonz/jj/discussions).
+or start a [GitHub Discussion](https://github.com/martinvonz/jj/discussions)
+&mdash; the developers monitor both channels.
+
+> 🚧 **NOTE** 🚧: This is not a Google product. It is an experimental
+> version-control system (VCS). I (Martin von Zweigbergk
+> <martinvonz@google.com>) started it as a hobby project in late 2019. That
+> said, this is now my full-time project at Google. My presentation from Git
+> Merge 2022 has information about Google's plans. See the
+> [slides](https://docs.google.com/presentation/d/1F8j9_UOOSGUN9MvHxPZX_L4bQ9NMcYOp1isn17kTC_M/view)
+> or the [recording](https://www.youtube.com/watch?v=bx_LGilOuE4).
 
 ## Getting started
 
